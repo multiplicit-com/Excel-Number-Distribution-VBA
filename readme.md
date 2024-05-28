@@ -1,8 +1,8 @@
 # Excel Distribution Models VBA Script
 
-This VBA macro script for Excel provides various distribution models for forecasting purposes. Simply provide a target number and specify the desired number of steps. All numbers at each step will add up th the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
+This VBA macro script for Excel provides various distribution models for forecasting purposes. Simply provide a target number and specify the desired number of steps in the formula. The script allows you to apply different mathematical models to change the distribution.
 
-The script allows you to apply different mathematical models to change the distribution.
+All the numbers at each step will add up th the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
 
 ## Distribution Models
 
@@ -40,7 +40,6 @@ Logarithmic distribution over 7 steps, show position 1:
 quadratic distribution over 9 steps, show position 8:
 
  **_=DistributeGoal("quadratic", 9, 4, $A10)_**
-
 
 ### Parameters
 DistributeGoal(distributionType As String, totalMonths As Integer, currentPosition As Integer, target As Double) As Double
