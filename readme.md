@@ -30,17 +30,6 @@ Make sure the excel workbook is saved in the '.xlsm' file format, or it won't su
 ## Usage
 Once installed, the **DistributeGoal** function can be called like any excel formula.
 
-### Excel examples
-
-Logarithmic distribution over 7 steps, show position 1:
-
- **_=DistributeGoal("logarithmic", 7, 1, $A$8)_**
-
-
-quadratic distribution over 9 steps, show position 8:
-
- **_=DistributeGoal("quadratic", 9, 4, $A10)_**
-
 ### Parameters
 _VBA declaration:_ DistributeGoal(**DistributionType** As String, **TotalMonths** As Integer, **CurrentPosition** As Integer, **Target** As Double) As Double
 
@@ -55,3 +44,16 @@ _VBA declaration:_ DistributeGoal(**DistributionType** As String, **TotalMonths*
 * **TotalMonths**: The total number of months to distribute the goal across.
 * **CurrentPosition**: The current position in the month range.
 * **Target**: The goal value to be distributed.
+
+
+### Excel examples
+
+Logarithmic distribution over 7 steps, show position 1:
+
+ **_=DistributeGoal("logarithmic", 7, 1, $A$8)_**
+
+
+quadratic distribution over 9 steps, show position 8:
+
+ **_=DistributeGoal("quadratic", 9, 8, $A10)_**
+
