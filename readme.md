@@ -42,9 +42,9 @@ quadratic distribution over 9 steps, show position 8:
  **_=DistributeGoal("quadratic", 9, 4, $A10)_**
 
 ### Parameters
-DistributeGoal(distributionType As String, totalMonths As Integer, currentPosition As Integer, target As Double) As Double
+_VBA declaration:_ DistributeGoal(**DistributionType** As String, **TotalMonths** As Integer, **CurrentPosition** As Integer, **Target** As Double) As Double
 
-* distributionType: the type of distribution model to apply to the target number.
+* **DistributionType**: the type of distribution model to apply to the target number.
   The accepted distribution types are:
   * linear
   * logarithmic
@@ -52,6 +52,6 @@ DistributeGoal(distributionType As String, totalMonths As Integer, currentPositi
   * normal
   * quadratic
     
-* totalMonths: The total number of months to distribute the goal across.
-* currentPosition: The current position in the month range.
-* target: The goal value to be distributed.
+* **TotalMonths**: The total number of months to distribute the goal across.
+* **CurrentPosition**: The current position in the month range.
+* **Target**: The goal value to be distributed.
