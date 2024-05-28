@@ -2,7 +2,7 @@
 
 This VBA macro script for Excel provides various distribution models for forecasting purposes. Simply provide a target number and specify the desired number of steps in the formula. The script allows you to apply different mathematical models to change the distribution.
 
-All the numbers at each step will add up th the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
+All the numbers at each step will add up to the the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
 
 ## Distribution Models
 
