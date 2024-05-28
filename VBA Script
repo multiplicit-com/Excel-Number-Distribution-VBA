@@ -1,0 +1,64 @@
+Function DistributeGoal(distributionType As String, totalMonths As Integer, currentPosition As Integer, target As Double) As Double
+    Dim value As Double
+    value = 0
+
+    Select Case distributionType
+        Case "linear"
+            ' Linear distribution: equally distribute the goal among the months
+            value = target / totalMonths
+        
+        Case "logarithmic"
+            ' Logarithmic distribution
+            Dim logSum As Double
+            logSum = 0
+            Dim i As Integer
+            For i = 1 To totalMonths
+                logSum = logSum + Log(1 + i)
+            Next i
+            Dim logValue As Double
+            logValue = Log(1 + currentPosition)
+            value = (logValue / logSum) * target
+        
+        Case "exponential"
+            ' Exponential distribution
+            Dim expSum As Double
+            expSum = 0
+            For i = 1 To totalMonths
+                expSum = expSum + Exp(i)
+            Next i
+            Dim expValue As Double
+            expValue = Exp(currentPosition)
+            value = (expValue / expSum) * target
+        
+        Case "normal"
+            ' Normal (Gaussian) distribution
+            Dim mean As Double
+            mean = (totalMonths + 1) / 2
+            Dim variance As Double
+            variance = totalMonths / 6
+            Dim normalSum As Double
+            normalSum = 0
+            For i = 1 To totalMonths
+                normalSum = normalSum + Exp(-((i - mean) ^ 2) / (2 * variance))
+            Next i
+            Dim normalValue As Double
+            normalValue = Exp(-((currentPosition - mean) ^ 2) / (2 * variance))
+            value = (normalValue / normalSum) * target
+        
+        Case "quadratic"
+            ' Quadratic distribution (Ski Jump)
+            Dim quadSum As Double
+            quadSum = 0
+            For i = 1 To totalMonths
+                quadSum = quadSum + i ^ 2
+            Next i
+            Dim quadValue As Double
+            quadValue = currentPosition ^ 2
+            value = (quadValue / quadSum) * target
+        
+        Case Else
+            Err.Raise vbObjectError + 513, "DistributeGoal", "Unknown distribution type: " & distributionType
+    End Select
+
+    DistributeGoal = value
+End Function
