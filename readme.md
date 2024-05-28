@@ -1,6 +1,8 @@
 # Excel Distribution Models VBA Script
 
-This repository contains an Excel VBA script that provides various distribution models for forecasting purposes. The script includes functions to distribute a target value across a specified number of months using different mathematical models.
+This VBA macro script for Excel provides various distribution models for forecasting purposes. Simply provide a target number and specify the desired number of steps. All numbers at each step will add up th the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
+
+The script allows you to apply different mathematical models to change the distribution.
 
 ## Distribution Models
 
