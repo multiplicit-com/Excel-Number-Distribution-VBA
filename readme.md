@@ -4,6 +4,8 @@ This VBA macro script for Excel provides various distribution models for forecas
 
 All the numbers at each step will add up to the the 'goal' you provided. When expressed as a percentage the percentage of each 'step' will add up to 100%.
 
+Note - there is also a verion for Google Sheets, which you can find here: https://github.com/multiplicit-com/Google-Sheets-Number-Distribution-AppScript-formula
+
 ## Distribution Models
 
 The script currently supports the following distribution models:
